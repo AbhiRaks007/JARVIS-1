@@ -1,0 +1,163 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: white;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  /* Jarvis Circle */
+  #jarvis {
+    background: radial-gradient(circle at center, #0f0f0f, #000);
+    padding: 30px;
+    border-radius: 50%;
+    box-shadow: 0 0 40px #00f, 0 0 80px #00f;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    position: relative;
+    animation: pulse 2s infinite;
+  }
+  
+  /* Pulse animation for the Jarvis circle */
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 20px #00f, 0 0 40px #00f;
+    }
+    50% {
+      box-shadow: 0 0 40px #00f, 0 0 80px #00f;
+    }
+    100% {
+      box-shadow: 0 0 20px #00f, 0 0 40px #00f;
+    }
+  }
+  
+  /* Button container below the circle */
+  .input-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 600px; /* Limit width on large screens */
+  }
+  
+  /* Input field styling */
+  #userInput {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    border: none;
+    background-color: #111;
+    color: #0ff;
+    font-size: 16px;
+    box-shadow: 0 0 10px #00f;
+    transition: width 0.3s ease;
+  }
+  
+  /* Buttons Styling */
+  button {
+    margin: 5px;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #0055ff, #00ccff);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Design: Tablet and Mobile Styles */
+  @media (max-width: 768px) {
+    /* Adjust Jarvis circle size */
+    #jarvis {
+      width: 150px;
+      height: 150px;
+      padding: 20px;
+    }
+  
+    /* Adjust button size for mobile */
+    button {
+      padding: 8px 15px;
+      font-size: 12px;
+    }
+  
+    /* Input field on smaller screens */
+    #userInput {
+      width: 85%;
+      font-size: 14px;
+    }
+  
+    .input-container {
+      padding: 20px;
+    }
+  }
+  
+  /* Mobile-first and extra-small screen sizes (Portrait) */
+  @media (max-width: 480px) {
+    body {
+      padding: 10px;
+    }
+  
+    /* Make Jarvis circle a bit smaller */
+    #jarvis {
+      width: 120px;
+      height: 120px;
+      padding: 15px;
+    }
+  
+    /* Input field and button adjustments for mobile */
+    #userInput {
+      width: 100%;
+      font-size: 14px;
+    }
+  
+    button {
+      width: 100%;
+      padding: 12px 0;
+      font-size: 16px;
+    }
+  
+    .input-container {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+  
+  /* Larger Screens (Laptops/Desktops) */
+  @media (min-width: 1024px) {
+    /* Keep the Jarvis circle large for desktop */
+    #jarvis {
+      width: 250px;
+      height: 250px;
+      padding: 35px;
+    }
+  
+    /* Larger input field and buttons for desktop */
+    #userInput {
+      width: 60%;
+      font-size: 18px;
+    }
+  
+    button {
+      padding: 12px 25px;
+      font-size: 16px;
+    }
+  }
+  
